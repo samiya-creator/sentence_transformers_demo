@@ -17,10 +17,10 @@ sentences = [
 
 # Encode all sentences
 embeddings = model.encode(sentences)
-
+# print(embeddings)
 # Compute cosine similarity between all pairs
 cos_sim = util.cos_sim(embeddings, embeddings)
-
+print(cos_sim)
 # Add all pairs to a list with their cosine similarity score
 all_sentence_combinations = []
 for i in range(len(cos_sim) - 1):
